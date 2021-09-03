@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using webapi_disney.Models;
+using WebAPIDisney.Models;
 using WebAPIDisney.Data;
 
-namespace webapi_disney.Controllers
+namespace WebAPIDisney.Controllers
 {
     public class ShowController : Controller
     {
@@ -31,7 +31,7 @@ namespace webapi_disney.Controllers
             });
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("movies/{id}")]
         public ActionResult<Show> Get(int id)
         {
             Show aux = context.Shows.Find(id);
@@ -43,7 +43,7 @@ namespace webapi_disney.Controllers
             return aux;
         }
 
-        [HttpPost("create")]
+        [HttpPost("movies/create")]
         public ActionResult Post(Show show)
         {
             context.Shows.Add(show);
@@ -52,7 +52,7 @@ namespace webapi_disney.Controllers
             return Ok();
         }
 
-        [HttpPut("update/{show_id}")]
+        [HttpPut("movies/update/{show_id}")]
         public ActionResult Put(int show_id, [FromBody] Show show)
         {
             if (show_id != show.IdShow)
@@ -65,7 +65,7 @@ namespace webapi_disney.Controllers
             return Ok();
         }
 
-        [HttpDelete("delete/{show_id}")]
+        [HttpDelete("movies/delete/{show_id}")]
         public ActionResult<Show> Delete(int show_id)
         {
             var show = context.Shows.Find(show_id);
@@ -79,6 +79,13 @@ namespace webapi_disney.Controllers
             context.SaveChanges();
 
             return show;
+        }
+
+        [HttpGet("characters/getByTitle/{title}")]
+        public IEnumerable<Show> GetByMovie(string title)
+        {
+            var movies = (from c in context.Shows where c.Titulo.Equals(title) select c).ToList();
+            return movies;
         }
 
     }

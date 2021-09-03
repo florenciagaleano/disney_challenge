@@ -1,0 +1,17 @@
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\UnitTests.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\UnitTests.pdb
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\obj\Debug\UnitTests.csprojAssemblyReference.cache
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\obj\Debug\UnitTests.csproj.CopyComplete
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\obj\Debug\UnitTests.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\UnitTests\obj\Debug\UnitTests.pdb

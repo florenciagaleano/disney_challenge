@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace webapi_disney.Migrations
+namespace WebAPIDisney.Migrations
 {
     public partial class Initial : Migration
     {

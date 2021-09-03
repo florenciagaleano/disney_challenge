@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using webapi_disney.Models;
+using WebAPIDisney.Models;
 using WebAPIDisney.Data;
 
-namespace webapi_disney.Controllers
+namespace WebAPIDisney.Controllers
 {
     public class PersonajeController : Controller
     {
@@ -28,7 +28,7 @@ namespace webapi_disney.Controllers
                 });
             }
 
-            [HttpGet("{id}")]
+            [HttpGet("characters/{id}")]
             public ActionResult<Personaje> Get(int id)
             {
                 Personaje aux = context.Personajes.Find(id);
@@ -39,7 +39,7 @@ namespace webapi_disney.Controllers
                 return aux;
             }
 
-            [HttpPost("create")]
+            [HttpPost("characters/create")]
             public ActionResult Post(Personaje personaje)
             {
                 context.Personajes.Add(personaje);
@@ -48,7 +48,7 @@ namespace webapi_disney.Controllers
                 return Ok();
             }
 
-            [HttpPut("update/{personaje_id}")]
+            [HttpPut("characters/update/{personaje_id}")]
             public ActionResult Put(int personaje_id, [FromBody] Personaje personaje)
             {
                 if (personaje_id != personaje.IdPersonaje)
@@ -61,7 +61,7 @@ namespace webapi_disney.Controllers
                 return Ok();
             }
 
-            [HttpDelete("delete/{personaje_id}")]
+            [HttpDelete("characters/delete/{personaje_id}")]
             public ActionResult<Personaje> Delete(int personaje_id)
             {
                 var personaje = context.Personajes.Find(personaje_id);

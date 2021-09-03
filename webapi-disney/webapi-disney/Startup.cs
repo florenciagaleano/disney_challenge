@@ -13,7 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAPIDisney.Data;
 
-namespace webapi_disney
+namespace WebAPIDisney
 {
     public class Startup
     {
@@ -38,6 +38,8 @@ namespace webapi_disney
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
 

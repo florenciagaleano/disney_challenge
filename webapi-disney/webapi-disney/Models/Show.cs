@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using webapi_disney.Validation;
+using WebAPIDisney.Validation;
 
-namespace webapi_disney.Models
+namespace WebAPIDisney.Models
 {
     public class Show
     {

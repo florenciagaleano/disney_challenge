@@ -60,3 +60,4 @@ C:\Users\Flia. Galeano\source\repos\webapi-disney\webapi-disney\obj\Debug\netcor
 C:\Users\Flia. Galeano\source\repos\webapi-disney\webapi-disney\obj\Debug\netcoreapp3.1\webapi-disney.genruntimeconfig.cache
 C:\Users\Flia. Galeano\source\repos\webapi-disney\webapi-disney\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\Flia. Galeano\source\repos\webapi-disney\webapi-disney\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Flia. Galeano\source\repos\webapi-disney\webapi-disney\obj\Debug\netcoreapp3.1\webapi-disney.csprojAssemblyReference.cache

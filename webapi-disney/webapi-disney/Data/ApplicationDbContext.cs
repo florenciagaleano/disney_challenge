@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using webapi_disney.Models;
+using WebAPIDisney.Models;
 
 namespace WebAPIDisney.Data
 {
@@ -17,5 +17,7 @@ namespace WebAPIDisney.Data
         public DbSet<Personaje> Personajes { get; set; }
         public DbSet<Show> Shows { get; set; }
         public DbSet<Genero> Generos { get; set; }
+
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

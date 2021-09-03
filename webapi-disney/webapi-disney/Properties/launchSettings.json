@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "webapi_disney": {
+    "WebAPIDisney": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",

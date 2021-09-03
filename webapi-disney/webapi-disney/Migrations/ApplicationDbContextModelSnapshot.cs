@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAPIDisney.Data;
 
-namespace webapi_disney.Migrations
+namespace WebAPIDisney.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -19,7 +19,7 @@ namespace webapi_disney.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("webapi_disney.Models.Genero", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Genero", b =>
                 {
                     b.Property<int>("IdGenero")
                         .ValueGeneratedOnAdd()
@@ -37,7 +37,7 @@ namespace webapi_disney.Migrations
                     b.ToTable("Generos");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Personaje", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Personaje", b =>
                 {
                     b.Property<int>("IdPersonaje")
                         .ValueGeneratedOnAdd()
@@ -64,7 +64,7 @@ namespace webapi_disney.Migrations
                     b.ToTable("Personajes");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Show", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Show", b =>
                 {
                     b.Property<int>("IdShow")
                         .ValueGeneratedOnAdd()
@@ -103,34 +103,57 @@ namespace webapi_disney.Migrations
                     b.ToTable("Shows");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Show", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Usuario", b =>
                 {
-                    b.HasOne("webapi_disney.Models.Genero", "Genero")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("WebAPIDisney.Models.Show", b =>
+                {
+                    b.HasOne("WebAPIDisney.Models.Genero", "Genero")
                         .WithMany("ShowsAsociados")
                         .HasForeignKey("GeneroIdGenero");
 
-                    b.HasOne("webapi_disney.Models.Personaje", null)
+                    b.HasOne("WebAPIDisney.Models.Personaje", null)
                         .WithMany("Filmografia")
                         .HasForeignKey("PersonajeIdPersonaje");
 
-                    b.HasOne("webapi_disney.Models.Show", null)
+                    b.HasOne("WebAPIDisney.Models.Show", null)
                         .WithMany("Personajes")
                         .HasForeignKey("ShowIdShow");
 
                     b.Navigation("Genero");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Genero", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Genero", b =>
                 {
                     b.Navigation("ShowsAsociados");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Personaje", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Personaje", b =>
                 {
                     b.Navigation("Filmografia");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Show", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Show", b =>
                 {
                     b.Navigation("Personajes");
                 });

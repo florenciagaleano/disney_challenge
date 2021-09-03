@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAPIDisney.Data;
 
-namespace webapi_disney.Migrations
+namespace WebAPIDisney.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20210902203333_Initial")]
@@ -21,7 +21,7 @@ namespace webapi_disney.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("webapi_disney.Models.Genero", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Genero", b =>
                 {
                     b.Property<int>("IdGenero")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace webapi_disney.Migrations
                     b.ToTable("Generos");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Personaje", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Personaje", b =>
                 {
                     b.Property<int>("IdPersonaje")
                         .ValueGeneratedOnAdd()
@@ -66,7 +66,7 @@ namespace webapi_disney.Migrations
                     b.ToTable("Personajes");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Show", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Show", b =>
                 {
                     b.Property<int>("IdShow")
                         .ValueGeneratedOnAdd()
@@ -105,34 +105,34 @@ namespace webapi_disney.Migrations
                     b.ToTable("Shows");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Show", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Show", b =>
                 {
-                    b.HasOne("webapi_disney.Models.Genero", "Genero")
+                    b.HasOne("WebAPIDisney.Models.Genero", "Genero")
                         .WithMany("ShowsAsociados")
                         .HasForeignKey("GeneroIdGenero");
 
-                    b.HasOne("webapi_disney.Models.Personaje", null)
+                    b.HasOne("WebAPIDisney.Models.Personaje", null)
                         .WithMany("Filmografia")
                         .HasForeignKey("PersonajeIdPersonaje");
 
-                    b.HasOne("webapi_disney.Models.Show", null)
+                    b.HasOne("WebAPIDisney.Models.Show", null)
                         .WithMany("Personajes")
                         .HasForeignKey("ShowIdShow");
 
                     b.Navigation("Genero");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Genero", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Genero", b =>
                 {
                     b.Navigation("ShowsAsociados");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Personaje", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Personaje", b =>
                 {
                     b.Navigation("Filmografia");
                 });
 
-            modelBuilder.Entity("webapi_disney.Models.Show", b =>
+            modelBuilder.Entity("WebAPIDisney.Models.Show", b =>
                 {
                     b.Navigation("Personajes");
                 });
